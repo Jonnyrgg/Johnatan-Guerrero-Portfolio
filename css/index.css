@@ -1,0 +1,472 @@
+
+/*******************Reset default browser stylest********************/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/********************************External Fonts***********************************/
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Lato:wght@300;400;700&display=swap');
+/*******************************************************************/
+
+
+/***************typography and general****************/
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font: 400 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 1em;
+}
+
+
+/*****************Clearfix**************/
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    clear: both;
+    *zoom: 1;
+}
+
+
+/********************* Navbar*******************/
+
+nav {
+    background-color: #346E93;
+    width: 100%;
+    text-align: center;
+}
+
+ul {
+    display: none;
+    clear: both;
+}
+
+#toggle {
+    display: none;
+}
+nav label{
+    float: right;
+    margin:1em;
+}
+
+#toggle:checked~ul {
+    display: block;
+}
+
+.active{
+    color: #96CDEF;
+    border-bottom: 2px solid #E22328;
+}
+
+nav img{
+    height: 60px;
+    float: left;
+    margin-left: 1em;
+}
+nav h1{
+    display: none;
+    font-family: 'Inconsolata', monospace;
+    color: #96CDEF;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/**************************************************Footer************************************/
+
+html {
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+footer {
+    background-color: #102B4C;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer small {
+    color: #fff;
+    font-weight: 300;
+}
+
+/************************************Hero Section-- Index Page*****************************************/
+
+.hero {
+    text-align: center;
+    background-color: #346E93;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin: .5em 0 1em 0;
+    line-height: 1em;
+    font-weight: 700;
+}
+
+.hero h2 span {
+    color: #E22328;
+}
+
+.hero p {
+    font-weight: 300;
+    margin-bottom: 2em;
+}
+
+.hero img {
+    width: 80%;
+}
+
+/************************************Contact Section - Contact Page*********************************/
+
+.contact{
+    text-align: center;
+    background-color: #fff;
+}
+.contact img{
+   width: 80%;
+}
+
+.contact h2{
+    font-size: 2em;
+    line-height: 1em;
+    font-weight: 700;
+    color: #BA2027;
+    margin-bottom: .5em;
+}
+.contact span{
+    font-size: 1.3em;
+    color: #346E93;
+    font-weight: 300;
+}
+
+.social-media{
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.social{
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social img{
+    width: 15%;
+}
+.social a{
+    background-color: #D2E9F6;
+    padding: .5em 2em .5em 2em;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #102B4C;
+    font-weight: 300;
+}
+
+.calendar{
+    margin-bottom: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/******************Project template- Work Page******************/
+.project{
+  background-color: #fff;
+  text-align: center;
+  color: #102B4C;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+.project:nth-of-type(2n) {
+    background-color: #346E93;
+    color: #fff;
+}
+
+.project .carousel{
+    width: 100%;
+ 
+}
+.project h2{
+    font-size: 1.8em;
+    font-weight: 700;
+    line-height: 1em;
+    margin: 1em;
+}
+.project p{
+    font-weight: 300;
+    padding-bottom: 1em;
+}
+
+.technologies{
+    display: grid;
+    grid-template-columns: 2fr;
+    gap: 10px;
+    margin: 1em;
+}
+
+ .project div span{
+     background-color: #96CDEF;
+     border-radius: 10px;
+     margin-bottom: 1em;
+     color: #000;
+     font-weight: 300;
+ }
+
+ .project:nth-of-type(2n) div span{
+     background-color: #BA2027;
+     color: #fff;
+ }
+.carousel button{
+    color: #fff;
+    background-color: #102B4C;
+    border: none;
+}
+.carousel button:hover{
+    background-color: #96CDEF;
+    color: #102B4C;
+}
+.carousel button:focus{
+    outline: none;
+}
+
+.carousel_container button{
+    display: none;
+    padding: 1em;
+    margin: 1em;
+}
+
+.glider-dot.active{
+    background:#96CDEF;
+}
+
+
+
+/***************************Responsive Desing mobile first - Tablet and Desktop***********************************/
+
+@media only screen and (min-width:768px) {
+    /**********************************Navbar- Responsive**********************************/
+    nav label {
+        display: none;
+    }
+    nav h1{
+        display: inline;
+        margin-left: 2em;
+    }
+    nav ul {
+        display: block;
+        float: right;
+        font-size: 0.8em;
+    }
+    nav ul li {
+        display: inline;
+        padding: 1em;
+        margin: 2em;
+    }
+    nav img,nav h1 {
+        float: left;
+    }
+
+    nav ul{
+        clear: none;
+    }
+    li:hover{
+        border-top: 1em solid #96CDEF;
+        background-color: #7DB4D7;
+        color: #fff;
+    }
+
+    nav h1,nav ul {
+        line-height: 60px;
+    }
+
+
+    /********************************* Hero Section- Index Page-Responsive ***************************/
+
+    .hero{
+        font-size: .8em;
+    }
+    .hero img {
+        width: 70%;
+        margin: 0;
+        float: right;
+    }
+
+    .hero h2,.hero p {
+        width: 50%;
+        margin-left: 5%;
+        position: absolute;
+    }
+
+    .hero p {
+        margin-top: 25%;
+    }
+
+    .hero h2 {
+        margin-top: 10%;
+    }
+
+    /********************************* Contact Section- constact Page-Responsive ***************************/
+
+    .social-media{
+        margin-top: 2em;
+    }
+    
+    .social  img{
+        width: 7%;
+    }
+
+    .contact p{
+        font-size: 2.5em;
+    }
+    .social a{
+        font-size: 1.5em;
+    }
+
+    /******************Project template- Work Page -Responsive******************/
+
+    .project{
+        display: flex;
+        align-items: center;
+    }
+    .project .carousel{
+        float: left;
+        width: 50%;
+    } 
+     
+    .technologies{
+        grid-template-columns: 1fr 1fr;
+        gap:3em;
+        margin: 2em 4em 0 4em;
+    }
+    .info{
+        margin: 1em;
+       float: right;
+       width: 45%;
+    }
+
+    .carousel_container button{
+        display:inline;
+    }
+
+}
+
+
+
+/***************************Responsive Desing mobile first - Desktop extra configurations***********************************/
+@media only screen and (min-width:1024px) {
+
+    /************************************Hero Section-Index Page - Responsive********************************/
+    .hero{
+        font-size: 1.2em;
+    }
+    .hero p{
+        margin-top: 30%;
+    }
+
+    /************************************ Contact Section -Contact Page -Responsive**************************/
+    .social a{
+        padding: .5em 5em .5em 5em;
+        font-size: 1em;
+    }
+    .social{
+        margin-top: 2.5em;
+    }
+    .contact img{
+        width: 65%;
+        float: left;
+    }
+    .social-media{
+        margin-top: 5em;
+    }
+    .contact h2{
+        margin-top: 2em;
+    }
+
+    .social  img{
+        width: 10%;
+    }
+}
